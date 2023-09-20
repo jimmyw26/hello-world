@@ -20,7 +20,7 @@ public class Main {
             int x = scanner.nextInt();
             System.out.println("Enter your second number: ");
             int y = scanner.nextInt();
-            int difference = x / y;
+            int difference =  x - y;
             System.out.print("Your difference will be " + difference);
 
         } else if (calculation == 3) {
@@ -43,8 +43,7 @@ public class Main {
 
         else  {
 
-
-            System.out.println(String(calculation) + " isn't one of the options");
+            System.out.println(calculation + " isn't one of the options");
 
         }
 
