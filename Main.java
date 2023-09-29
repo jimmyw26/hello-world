@@ -6,34 +6,30 @@ import static java.lang.System.exit;
 public class Main {
     public static <ArithemticException extends Throwable> void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Java Calculator\n");
-        System.out.println("Addition(1) Subtraction(2) Multiplication(3) Division(4)\n");
-        System.out.println("What kind of calculation would you like to do: ");
-        String calculation = scanner.nextLine();
-        if (Objects.equals(calculation, "1")) {
+        startGame s = new startGame();
+        s.intro();
+        String operation = scanner.nextLine();
+        if (Objects.equals(operation, "1")) {
             System.out.println("Enter your first number: ");
             int x = scanner.nextInt();
             System.out.println("Enter your second number: ");
             int y = scanner.nextInt();
-            int sum = x + y;
-            System.out.print("Your sum will be: " + sum);
+            s.add(x,y);
 
-        } else if (Objects.equals(calculation, "2")) {
+        } else if (Objects.equals(operation, "2")) {
             System.out.println("Enter your first number: ");
             int x = scanner.nextInt();
             System.out.println("Enter your second number: ");
             int y = scanner.nextInt();
-            int difference = x - y;
-            System.out.print("Your difference will be " + difference);
+            s.sub(x,y);
 
-        } else if (Objects.equals(calculation, "3")) {
+        } else if (Objects.equals(operation, "3")) {
             System.out.println("Enter your first number: ");
             int x = scanner.nextInt();
             System.out.println("Enter your second number: ");
             int y = scanner.nextInt();
-            int product = x * y;
-            System.out.print("Your product will be " + product);
-        } else if (Objects.equals(calculation, "4")) {
+            s.mult(x,y);
+        } else if (Objects.equals(operation, "4")) {
             System.out.println("Enter your first number: ");
             int x = scanner.nextInt();
             System.out.println("Enter your second number: ");
@@ -51,7 +47,7 @@ public class Main {
 
             } else {
 
-                System.out.println(calculation + " isn't one of the options");
+                System.out.println(operation + " isn't one of the options");
 
             }
 
