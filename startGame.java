@@ -5,6 +5,8 @@ import static java.lang.System.exit;
 public class startGame {
     Scanner s = new Scanner(System.in);
 
+
+
     public void intro() {
         System.out.println("Welcome to the Java Calculator\n");
         System.out.println("What is your name? ");
@@ -31,17 +33,19 @@ public class startGame {
     }
 
     public void div(int div1, int div2) {
-        int sol = div1 / div2;
-        int rem = div1 % div2;
-    if(div2 == 0) {
-        try {
-            int ae = div1 / div2;
-        } catch (ArithmeticException ae) {
-            System.out.println("Your answer will be undefined");
-            exit(0);
+        if (div2 == 0) {
+            try {
+                int und = div1 / div2;
+            } catch (Exception und) {
+                System.out.println("Your answer will be undefined");
+                exit(0);
+            }
+        } else{
+                int sol = div1 / div2;
+                int rem = div1 % div2;
+
+                System.out.print("Your quotient will be " + sol + " with a remainder of " + rem);
+            }
         }
-        
-        System.out.print("Your quotient will be " + sol + " with a remainder of " + rem);
     }
-}
 
