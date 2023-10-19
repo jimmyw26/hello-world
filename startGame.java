@@ -12,7 +12,7 @@ public class startGame {
         System.out.println("What is your name? ");
         String name = s.nextLine();
         System.out.println("Hello " + name + "!\n");
-        System.out.println("Which operator? : Addition(1) Subtraction(2) Multiplication(3) Division(4)\n");
+        System.out.println("Which operator? : Addition(1) Subtraction(2) Multiplication(3) Division(4) Power(5)\n");
         System.out.println("What kind of operation would you like to do: ");
     }
 
@@ -32,6 +32,12 @@ public class startGame {
         System.out.print("Your product will be: " + sol);
     }
 
+    public void power(double base, double exponent)
+    {
+        double product = Math.pow(base, exponent);
+        System.out.print("Your product will be: " + product);
+    }
+
     public void div(int div1, int div2) {
         if (div2 == 0) {
             try {
@@ -48,4 +54,3 @@ public class startGame {
             }
         }
     }
-
