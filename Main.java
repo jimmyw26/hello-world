@@ -35,6 +35,15 @@ public class Main {
             System.out.println("Enter your second number: ");
             int y = scanner.nextInt();
             s.div(x, y);
+        } else if (Objects.equals(operation, "5")) {
+            System.out.println("Enter your first number: ");
+            double x = scanner.nextDouble();
+            System.out.println("Enter your second number: ");
+            double y = scanner.nextDouble();
+            s.power(x,y);
+
+
+
 
         } else {
 
