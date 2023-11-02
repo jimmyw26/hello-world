@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
@@ -53,4 +54,52 @@ public class startGame {
                 System.out.print("Your quotient will be " + sol + " with a remainder of " + rem);
             }
         }
+    public void mainGame()
+    {
+        Scanner scanner = new Scanner(System.in);
+        startGame s = new startGame();
+        s.intro();
+        String operation = scanner.nextLine();
+        if (Objects.equals(operation, "1")) {
+            System.out.println("Enter your first number: ");
+            int x = scanner.nextInt();
+            System.out.println("Enter your second number: ");
+            int y = scanner.nextInt();
+            s.add(x, y);
+
+        } else if (Objects.equals(operation, "2")) {
+            System.out.println("Enter your first number: ");
+            int x = scanner.nextInt();
+            System.out.println("Enter your second number: ");
+            int y = scanner.nextInt();
+            s.sub(x, y);
+
+        } else if (Objects.equals(operation, "3")) {
+            System.out.println("Enter your first number: ");
+            int x = scanner.nextInt();
+            System.out.println("Enter your second number: ");
+            int y = scanner.nextInt();
+            s.mult(x, y);
+        } else if (Objects.equals(operation, "4")) {
+            System.out.println("Enter your first number: ");
+            int x = scanner.nextInt();
+            System.out.println("Enter your second number: ");
+            int y = scanner.nextInt();
+            s.div(x, y);
+        } else if (Objects.equals(operation, "5")) {
+            System.out.println("Enter your first number: ");
+            double x = scanner.nextDouble();
+            System.out.println("Enter your second number: ");
+            double y = scanner.nextDouble();
+            s.power(x,y);
+
+
+
+
+        } else {
+
+            System.out.println("Not one of the options");
+
+        }
+    }
     }
