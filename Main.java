@@ -1,54 +1,24 @@
 import java.util.Objects;
 import java.util.Scanner;
 
-import static java.lang.System.exit;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        startGame s = new startGame();
-        s.intro();
-        String operation = scanner.nextLine();
-        if (Objects.equals(operation, "1")) {
-            System.out.println("Enter your first number: ");
-            int x = scanner.nextInt();
-            System.out.println("Enter your second number: ");
-            int y = scanner.nextInt();
-            s.add(x, y);
-
-        } else if (Objects.equals(operation, "2")) {
-            System.out.println("Enter your first number: ");
-            int x = scanner.nextInt();
-            System.out.println("Enter your second number: ");
-            int y = scanner.nextInt();
-            s.sub(x, y);
-
-        } else if (Objects.equals(operation, "3")) {
-            System.out.println("Enter your first number: ");
-            int x = scanner.nextInt();
-            System.out.println("Enter your second number: ");
-            int y = scanner.nextInt();
-            s.mult(x, y);
-        } else if (Objects.equals(operation, "4")) {
-            System.out.println("Enter your first number: ");
-            int x = scanner.nextInt();
-            System.out.println("Enter your second number: ");
-            int y = scanner.nextInt();
-            s.div(x, y);
-        } else if (Objects.equals(operation, "5")) {
-            System.out.println("Enter your first number: ");
-            double x = scanner.nextDouble();
-            System.out.println("Enter your second number: ");
-            double y = scanner.nextDouble();
-            s.power(x,y);
-
-
-
-
-        } else {
-
-            System.out.println("Not one of the options");
-
+        startGame p = new startGame();
+        Scanner rest = new Scanner(System.in);
+        boolean yesno = true;
+        while(yesno == true)
+        {
+            p.mainGame();
+            System.out.println("\n\nWould you like to reuse the Java Calculaotr? (y/n)");
+            String yesorno = rest.nextLine();
+            if(Objects.equals(yesorno, "y")) {
+                yesno = true;
+            }
+            if(Objects.equals(yesorno, "n"))
+            {
+                System.out.println("See you next time user!");
+                yesno = false;
+            }
         }
     }
 }
