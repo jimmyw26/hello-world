@@ -3,11 +3,8 @@ import java.util.Scanner;
 
 import static java.lang.System.exit;
 
-public class startGame {
+public class Calculator {
     Scanner s = new Scanner(System.in);
-
-
-
     public void intro() {
         System.out.println("Welcome to the Java Calculator\n");
         System.out.println("What is your name? ");
@@ -57,7 +54,7 @@ public class startGame {
     public void mainGame()
     {
         Scanner scanner = new Scanner(System.in);
-        startGame s = new startGame();
+        Calculator s = new Calculator();
         s.intro();
         String operation = scanner.nextLine();
         if (Objects.equals(operation, "1")) {
